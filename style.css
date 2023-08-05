@@ -1,0 +1,65 @@
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+.container_table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #007BFF;
+    justify-content: center;
+    align-content: center;
+    height: 320px;
+    aspect-ratio: 1;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    grid-template-areas:
+    "one two tres"
+    "four five six"
+    "seven eigth nine";
+}
+
+.container_table div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E84959;
+    padding: 30px 40px;
+    color: white;
+    border-radius: 30px;
+    font-size: 25px;
+}
+/*aca necesito entrar a cada uno de los hijos pero como no tiene clases por eso utilizo nth child para referirme  a cada uno de los hijos despues ya solo copie*/
+.container_table div:nth-child(1) {
+    grid-area: two; /*en el ejercicio propuesto two nine one tres tenia otros numeros al azar y en pagina se mostraba otros numero el ejer constaba en ordenarlos asi como en el imagen de muestra.*/
+}
+.container_table div:nth-child(2) {
+    grid-area: nine;
+}
+.container_table div:nth-child(3) {
+    grid-area: one;
+}
+.container_table div:nth-child(4) {
+    grid-area: eigth;
+}
+.container_table div:nth-child(5) {
+    grid-area: tres; /*tres esta puesto asi en español para que veamos el comportamiento*/
+}
+.container_table div:nth-child(6) {
+    grid-area: seven;
+}
+.container_table div:nth-child(7) {
+    grid-area: five;
+}
+.container_table div:nth-child(8) {
+    grid-area: four;
+}
+.container_table div:nth-child(9) {
+    grid-area: six;
+}
